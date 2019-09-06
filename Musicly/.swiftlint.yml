@@ -1,0 +1,37 @@
+disabled_rules: # rule identifiers to exclude from running
+
+opt_in_rules: # some rules are only opt-in
+
+# Find all the available rules by running:
+# swiftlint rules
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+
+# configurable rules can be customized from this configuration file
+
+# Temporary set whitespaces warnings as errors to force developers fixing them!
+trailing_whitespace:
+    severity: error
+trailing_newline:
+    severity: error
+vertical_whitespace:
+    severity: error
+
+identifier_name:
+    excluded: # excluded via string array
+        - id
+        - x
+        - y
+
+line_length:
+    warning: 200 # default to 120
+    error: 500 # default to 200
+    ignores_urls: true # default to false
+    ignores_function_declarations: true # default to false
+    ignores_comments: true # default to false
+    ignores_interpolated_strings: true # default to false
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+
+#custom_rules:
