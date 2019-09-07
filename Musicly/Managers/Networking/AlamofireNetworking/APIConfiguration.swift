@@ -15,10 +15,8 @@ import Alamofire
 public struct PlatformURL {
     private init() {}
 
-    private static let baseURL = "http://ws.audioscrobbler.com/"
-    static let auth: String = "\(baseURL)/auth"
-    static let api: String = baseURL
-    static let path: String = "/2.0/"
+    private static let baseURL = "http://ws.audioscrobbler.com/2.0/?"
+    static let api: String = "\(baseURL)"
 }
 
 // MARK: - Header Keys
@@ -43,7 +41,6 @@ protocol APIConfiguration: URLRequestConvertible {
     var path: String { get }
     var method: HTTPMethod { get }
     var parameters: Parameters? { get }
-    var query: String { get } /* only for "/?" requests */
     var requiresAuth: Bool { get }
     var multipartFormData: ((MultipartFormData) -> Void)? { get }
 }
@@ -52,30 +49,21 @@ extension APIConfiguration {
     var method: HTTPMethod { return .get }
     var parameters: Parameters? { return nil }
     var requiresAuth: Bool { return false }
-    var query: String { return query } /* only for "/?" requests */
     var multipartFormData: ((MultipartFormData) -> Void)? { return nil }
 }
 
 extension APIConfiguration {
     func asURLRequest() throws -> URLRequest {
-        /*
-         // construct URL
-         let url = try PlatformURL.api.asURL().appendingPathComponent(path)
-         // construct URLRequest
-         var urlRequest = URLRequest(url: url)
-         */
+        // construct URL
 
-        // [Start of: last.fm urlComponents modification]
-        // API functions of last.fm api is using "/?" mark for endpoints, there comes a conflict with URL request for ios.
-        // We hade to construct new way with urlComponents and add new parameter query in APIConfigurations.
+        // if api does NOT use question mark, for ex. "/?"
+        //let url = try PlatformURL.api.asURL().appendingPathComponent(path)
 
-        var urlComponents = URLComponents(string: PlatformURL.api)!
-        urlComponents.path = PlatformURL.path
-        urlComponents.query = query
+        // if api USE question mark, for ex. "/?"
+        let url = try (PlatformURL.api + path).asURL()
 
         // construct URLRequest
-        var urlRequest = URLRequest(url: urlComponents.url!)
-        // [End of: last.fm urlComponents modification]
+        var urlRequest = URLRequest(url: url)
 
         // HTTP Method
         urlRequest.httpMethod = method.rawValue
@@ -100,6 +88,7 @@ extension APIConfiguration {
             }
         }
 
+        print("URL REQ: \n\n", urlRequest)
         return urlRequest
     }
 

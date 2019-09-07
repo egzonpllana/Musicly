@@ -19,7 +19,8 @@ enum SearchEndPoint: APIConfiguration {
 extension SearchEndPoint {
     var path: String {
         switch self {
-        case .getAlbums, .getArtist: return ""
+        case .getArtist(let artist): return "method=artist.gettopalbums&artist=\(artist)&api_key=\(lastFMAPIKey)&format=json"
+        case .getAlbums(let artist): return "method=artist.gettopalbums&artist=\(artist)&api_key=\(lastFMAPIKey)&format=json"
         }
     }
 
@@ -33,13 +34,6 @@ extension SearchEndPoint {
     var parameters: Parameters? {
         switch self {
         case .getArtist, .getAlbums: return nil
-        }
-    }
-
-    var query: String {
-        switch self {
-        case .getArtist(let name): return "method=artist.search&artist=\(name)&api_key=\(lastFMAPIKey)&format=json"
-        case .getAlbums(let artist): return "method=artist.gettopalbums&artist=\(artist)&api_key=\(lastFMAPIKey)&format=json"
         }
     }
 
