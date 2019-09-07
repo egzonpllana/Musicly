@@ -231,7 +231,7 @@
 		52814F662322FFD900E4D4BA /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				52ED4F3022FEE41B00F54CD1 /* NetworkingService */,
+				52ED4F3022FEE41B00F54CD1 /* Networking */,
 				52ED4F652301E0D000F54CD1 /* Preferences */,
 			);
 			path = Managers;
@@ -328,14 +328,14 @@
 			path = ImageLoaderService;
 			sourceTree = "<group>";
 		};
-		52ED4F3022FEE41B00F54CD1 /* NetworkingService */ = {
+		52ED4F3022FEE41B00F54CD1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				52ED4F702301E7AE00F54CD1 /* API.md */,
 				52ED4F3122FEE42600F54CD1 /* AlamofireNetworking */,
 				52ED4F3222FEE42A00F54CD1 /* NetworkConfiguration */,
 			);
-			path = NetworkingService;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		52ED4F3122FEE42600F54CD1 /* AlamofireNetworking */ = {
