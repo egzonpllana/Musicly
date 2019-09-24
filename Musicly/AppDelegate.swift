@@ -18,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, HasDependencies {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        self.loggerService.log("Application did finish launching with \(String(describing: launchOptions)) in \(application.applicationState)", level: .info)
-
+        // Initialization of AppDependency
         configure(dependency: AppDependency())
+
+        // Log options for didFinishLaunching
+        self.loggerService.log("Application did finish launching with \(String(describing: launchOptions)) in \(application.applicationState)", level: .info)
 
         return true
     }
