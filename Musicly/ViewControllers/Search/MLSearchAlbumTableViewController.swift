@@ -11,6 +11,7 @@ import UIKit
 class MLSearchAlbumTableViewController: UITableViewController, UITextFieldDelegate, HasDependencies {
 
     // MARK: - Dependencies
+
     private lazy var albumService: AlbumService = dependencies.albumService()
 
     // MARK: - Properties
@@ -24,7 +25,7 @@ class MLSearchAlbumTableViewController: UITableViewController, UITextFieldDelega
         }
     }
 
-    // MARK: - View cycle
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,8 @@ class MLSearchAlbumTableViewController: UITableViewController, UITextFieldDelega
         // Show search textfield
         searchAlbumTextField.becomeFirstResponder()
     }
+
+    // MARK: - Methods
 
     private func searchArtist(with artistName: String) {
         albumService.searchAlbums(artist: artistName) { (result) in
@@ -48,6 +51,7 @@ class MLSearchAlbumTableViewController: UITableViewController, UITextFieldDelega
     }
 
     // MARK: - Actions
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

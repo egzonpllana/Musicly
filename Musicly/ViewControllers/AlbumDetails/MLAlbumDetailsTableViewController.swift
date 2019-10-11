@@ -18,6 +18,8 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
 
     // MARK: - Properties
 
+    weak var homeViewController: MLHomeTableViewController?
+
     var album: MLAlbum!
     var albumStored = false
 
@@ -27,7 +29,7 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
     @IBOutlet weak var downloadedAlbumImage: UIImageView!
     @IBOutlet weak var downloadedAlbumLabel: UILabel!
 
-    // MARK: - View cycle
+    // MARK: - View life cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +42,12 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
     }
 
     // MARK: - Actions
+
     @IBAction func closeButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
+    // MARK: - Methods
 
     private func loadUI() {
         // check if album is stored in Realm
