@@ -27,6 +27,8 @@ class MLHomeTableViewController: UITableViewController, HasDependencies {
         }
     }
 
+    // MARK: View life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setFooterView()
@@ -36,6 +38,8 @@ class MLHomeTableViewController: UITableViewController, HasDependencies {
         super.viewWillAppear(animated)
         loadAlbums()
     }
+
+    // MARK: Methods
 
     func loadAlbums() {
         albumService.getStoredAlbums { (result) in
@@ -64,6 +68,8 @@ class MLHomeTableViewController: UITableViewController, HasDependencies {
             tableView.tableFooterView = nil
         }
     }
+
+    // MARK: Storyboard Segues
 
     @IBAction func unwindToHomeScreen(_ segue: UIStoryboardSegue) { }
 }
