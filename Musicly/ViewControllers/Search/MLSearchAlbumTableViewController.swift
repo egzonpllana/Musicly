@@ -51,7 +51,7 @@ class MLSearchAlbumTableViewController: UITableViewController, UITextFieldDelega
     }
 
     // MARK: - Actions
-    
+
     @IBAction func backButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

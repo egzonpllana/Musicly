@@ -110,6 +110,7 @@ extension MLHomeTableViewController: SegueHandlerType {
         case .albumDetails:
             if let destination = segue.destination as? MLAlbumDetailsTableViewController, let album = sender as? MLAlbum {
                 destination.album = album
+                destination.homeViewController = self
             }
         case .searchAlbum:
             break

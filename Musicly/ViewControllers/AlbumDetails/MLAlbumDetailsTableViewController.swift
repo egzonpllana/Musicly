@@ -44,6 +44,7 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
     // MARK: - Actions
 
     @IBAction func closeButtonPressed(_ sender: Any) {
+        self.homeViewController?.loadAlbums()
         self.dismiss(animated: true, completion: nil)
     }
 
