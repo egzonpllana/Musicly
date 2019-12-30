@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Be-Hk-QoO">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Be-Hk-QoO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,7 +135,7 @@
                         <outlet property="emptyBackgroundView" destination="J65-P9-EJz" id="sE6-aU-TUy"/>
                         <outlet property="emptyViewDescriptionLabel" destination="zsR-Lp-BCk" id="lVY-xc-Nxk"/>
                         <outlet property="emptyViewTitleLabel" destination="C9a-yc-GO0" id="O0Q-j8-YcA"/>
-                        <segue destination="b9e-8D-bhI" kind="presentation" identifier="albumDetails" id="rC2-Sg-U20"/>
+                        <segue destination="b9e-8D-bhI" kind="presentation" identifier="albumDetails" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rC2-Sg-U20"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbp-wk-6zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -206,7 +204,7 @@ Stored albums will be listed here.</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Be-Hk-QoO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d3i-Ge-DOo">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

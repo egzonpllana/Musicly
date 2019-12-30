@@ -37,7 +37,8 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // load ui with proper data
+
+        // Load ui with proper data
         loadUI()
     }
 
@@ -51,10 +52,9 @@ class MLAlbumDetailsTableViewController: UITableViewController, HasDependencies 
     // MARK: - Methods
 
     private func loadUI() {
-        // check if album is stored in Realm
+        // Check if album is stored in Realm
         isAlbumDownloaded()
 
-        // properties
         albumTitleLabel.text = album.name
         artistNameLabel.text = album.artist.name
         imageLoadingService.load(imagePath: album.images.first?.image, into: albumImage, placeholder: nil) { (result) in

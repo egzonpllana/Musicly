@@ -19,12 +19,13 @@
 		52762C7122FEC32B00F549B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52762C7022FEC32B00F549B6 /* Assets.xcassets */; };
 		52762C7422FEC32B00F549B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52762C7222FEC32B00F549B6 /* LaunchScreen.storyboard */; };
 		52762C7E22FEC3B500F549B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52762C7D22FEC3B500F549B6 /* AppDelegate.swift */; };
+		52CB4A5C23BA213A0062061B /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4A5B23BA213A0062061B /* Storyboardable.swift */; };
+		52CB4A5F23BA21C30062061B /* MLLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4A5E23BA21C30062061B /* MLLoaderViewController.swift */; };
 		52ED4F1022FECFD800F54CD1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 52ED4F0F22FECFD800F54CD1 /* README.md */; };
 		52ED4F1522FED2EB00F54CD1 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F1422FED2EB00F54CD1 /* DependencyContainer.swift */; };
 		52ED4F1822FED39C00F54CD1 /* LoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F1722FED39C00F54CD1 /* LoaderService.swift */; };
 		52ED4F1A22FED3A800F54CD1 /* MockLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F1922FED3A800F54CD1 /* MockLoaderService.swift */; };
 		52ED4F1C22FED3B400F54CD1 /* AppLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F1B22FED3B400F54CD1 /* AppLoaderService.swift */; };
-		52ED4F1F22FED45900F54CD1 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F1E22FED45900F54CD1 /* StoryboardIdentifier.swift */; };
 		52ED4F2122FED4DC00F54CD1 /* Loader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52ED4F2022FED4DC00F54CD1 /* Loader.storyboard */; };
 		52ED4F2322FED8CC00F54CD1 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F2222FED8CC00F54CD1 /* AppDependency.swift */; };
 		52ED4F2522FED92800F54CD1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED4F2422FED92800F54CD1 /* Result.swift */; };
@@ -87,12 +88,13 @@
 		52762C7322FEC32B00F549B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52762C7522FEC32B00F549B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52762C7D22FEC3B500F549B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52CB4A5B23BA213A0062061B /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		52CB4A5E23BA21C30062061B /* MLLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLLoaderViewController.swift; sourceTree = "<group>"; };
 		52ED4F0F22FECFD800F54CD1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52ED4F1422FED2EB00F54CD1 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		52ED4F1722FED39C00F54CD1 /* LoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderService.swift; sourceTree = "<group>"; };
 		52ED4F1922FED3A800F54CD1 /* MockLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoaderService.swift; sourceTree = "<group>"; };
 		52ED4F1B22FED3B400F54CD1 /* AppLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoaderService.swift; sourceTree = "<group>"; };
-		52ED4F1E22FED45900F54CD1 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifier.swift; sourceTree = "<group>"; };
 		52ED4F2022FED4DC00F54CD1 /* Loader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loader.storyboard; sourceTree = "<group>"; };
 		52ED4F2222FED8CC00F54CD1 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 		52ED4F2422FED92800F54CD1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		52CB4A5D23BA219D0062061B /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				52CB4A5E23BA21C30062061B /* MLLoaderViewController.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		52ED4F1122FED2BA00F54CD1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,7 +278,6 @@
 				52ED4F1722FED39C00F54CD1 /* LoaderService.swift */,
 				52ED4F1922FED3A800F54CD1 /* MockLoaderService.swift */,
 				52ED4F1B22FED3B400F54CD1 /* AppLoaderService.swift */,
-				52ED4F2022FED4DC00F54CD1 /* Loader.storyboard */,
 			);
 			path = LoaderService;
 			sourceTree = "<group>";
@@ -277,11 +286,11 @@
 			isa = PBXGroup;
 			children = (
 				52F7FB32232055ED00302205 /* DataSourceState.swift */,
-				52ED4F1E22FED45900F54CD1 /* StoryboardIdentifier.swift */,
 				52ED4F2422FED92800F54CD1 /* Result.swift */,
 				52F7FB312320540100302205 /* NativeCodersAlert */,
 				52ED4F6C2301E25E00F54CD1 /* SegueHandlerType.swift */,
 				52ED4F6E2301E28600F54CD1 /* StoryboardIdentifiable.swift */,
+				52CB4A5B23BA213A0062061B /* Storyboardable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 		52ED4F2622FED94C00F54CD1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				52ED4F2022FED4DC00F54CD1 /* Loader.storyboard */,
 				52762C6D22FEC32A00F549B6 /* Main.storyboard */,
 				52ED4F3D22FEF05200F54CD1 /* SearchAlbums.storyboard */,
 				52ED4F3B22FEE87F00F54CD1 /* AlbumDetails.storyboard */,
@@ -299,6 +309,7 @@
 		52ED4F2722FED95E00F54CD1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52CB4A5D23BA219D0062061B /* Loader */,
 				52ED4F822308209900F54CD1 /* Home */,
 				52ED4F83230820A000F54CD1 /* Search */,
 				52ED4F84230820AD00F54CD1 /* AlbumDetails */,
@@ -642,6 +653,7 @@
 				525B3D3823085C5A007F9202 /* MLAlbum+Realm.swift in Sources */,
 				52ED4F7A23080B9E00F54CD1 /* UIGradientView.swift in Sources */,
 				52F7FB512321C6C100302205 /* AppBaseService.swift in Sources */,
+				52CB4A5F23BA21C30062061B /* MLLoaderViewController.swift in Sources */,
 				52ED4F75230804F700F54CD1 /* MLHomeTableViewController.swift in Sources */,
 				52ED4F1A22FED3A800F54CD1 /* MockLoaderService.swift in Sources */,
 				52ED4F692301E19600F54CD1 /* AppAlert.swift in Sources */,
@@ -659,13 +671,13 @@
 				525B3D3623085B14007F9202 /* MockStorageService.swift in Sources */,
 				52ED4F2B22FED9CD00F54CD1 /* ImageLoaderService.swift in Sources */,
 				525B3D3E23085E09007F9202 /* MLImage+Realm.swift in Sources */,
-				52ED4F1F22FED45900F54CD1 /* StoryboardIdentifier.swift in Sources */,
 				52ED4F672301E0E000F54CD1 /* Preferences.swift in Sources */,
 				52ED4F1822FED39C00F54CD1 /* LoaderService.swift in Sources */,
 				525B3D3B23085D67007F9202 /* MLArtist+Realm.swift in Sources */,
 				525B3D432308610F007F9202 /* MLSearchResult.swift in Sources */,
 				52F7FB3B2321C06D00302205 /* MockLoggerService.swift in Sources */,
 				525B3D3423085AFD007F9202 /* StorageService.swift in Sources */,
+				52CB4A5C23BA213A0062061B /* Storyboardable.swift in Sources */,
 				52ED4F86230820C400F54CD1 /* MLSearchAlbumTableViewController.swift in Sources */,
 				52762C7E22FEC3B500F549B6 /* AppDelegate.swift in Sources */,
 				52ED4F3422FEE44600F54CD1 /* APIClient.swift in Sources */,

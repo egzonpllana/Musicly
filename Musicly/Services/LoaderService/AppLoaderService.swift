@@ -43,15 +43,13 @@ class AppLoaderService: AppModuleService, LoaderService {
             return
         }
 
-        guard let loader = UIStoryboard(name: .loader).instantiateInitialViewController() else {
-            fatalError("Missing initial view controller in \(StoryboardIdentifier.loader) storyboard")
-        }
+        /// Init loader view controller
+        let loader = MLLoaderViewController.instantiate()
         loader.modalTransitionStyle = .crossDissolve
-        let newWindow = UIWindow(frame: windowBounds)
-        newWindow.windowLevel = UIWindow.Level.statusBar
-        newWindow.rootViewController = UIViewController()
-        newWindow.isHidden = false
-        loaderWindowRootViewController = newWindow.rootViewController
+        loader.modalPresentationStyle = .overCurrentContext
+
+        /// Present loader
+        loaderWindowRootViewController = self.topViewController()
         loaderWindowRootViewController?.present(loader, animated: true, completion: nil)
 
     }
@@ -69,15 +67,19 @@ class AppLoaderService: AppModuleService, LoaderService {
     }
 }
 
-class LoaderViewController: UIViewController {
-
-    @IBOutlet weak var loaderImageView: UIImageView!
-    let loaderImage = UIImage.animatedImageNamed("loader", duration: 16.0/24.0)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        loaderImageView.image = loaderImage
+private extension AppLoaderService {
+    func topViewController(_ viewController: UIViewController? = UIApplication.shared.windows.filter({$0.isKeyWindow}).first?.rootViewController) -> UIViewController? {
+        if let nav = viewController as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = viewController as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = viewController?.presentedViewController {
+            return topViewController(presented)
+        }
+        return viewController
     }
 }
