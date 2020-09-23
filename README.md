@@ -8,19 +8,11 @@ Musicly - iOS App.
 
 ## Cocoapods ##
 
-    * Using Alamofire (4.8.2)
-    * Using Nuke (8.0.1)
-    * Using SwiftLint (0.34.0)
-    * Using RealmSwift (3.14.0)
-    * Using XCGLogger (7.0.0)
-
-### Pods documentation ###
-
-    * Alamofire: https://github.com/Alamofire/Alamofire
-    * Nuke: https://github.com/kean/Nuke
-    * RealmSwift: https://realm.io/
-    * SwiftLint: https://github.com/realm/SwiftLint
-    * XCGLogger: https://github.com/DaveWoodCom/XCGLogger
+    * Using Alamofire (4.8.2)       https://github.com/Alamofire/Alamofire
+    * Using Nuke (8.0.1)            https://github.com/kean/Nuke
+    * Using SwiftLint (0.34.0)      https://github.com/realm/SwiftLint
+    * Using RealmSwift (3.14.0)     https://realm.io/
+    * Using XCGLogger (7.0.0)       https://github.com/DaveWoodCom/XCGLogger
     
 ## Application Design Pattern ##
 
