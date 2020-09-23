@@ -2,16 +2,9 @@
 # Swifty Protocol-Oriented Dependency Injection #
 Musicly - iOS App.
 
-    Musicly is an app for searching and storing music albums.
+    Musicly is an app for searching songs and albums on LastFm endpoints and storing musics to Realm database.
     End points that are being used: https://www.last.fm/ (http://ws.audioscrobbler.com/)
 
-## Repository ##
-
-    * [Bitbucket repository](https://bitbucket.org/)
-
-## Developers ##
-    * Egzon Pllana - 10/08/2019
-    
 ## Cocoapods ##
 
     * Using Alamofire (4.8.2)
