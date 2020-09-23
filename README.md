@@ -30,6 +30,12 @@ Musicly - iOS App.
     
 ## Application Design Pattern ##
 
+    - MVC
+    - Dependency Injection for Services
+    - Storyboardable
+    - SegueHandlers
+    - Codable
+
     Inpired by the way of coding by Olivier Voyer and Basem Emara.
     Olivier Voyer: https://linkedin.com/in/oliviervoyer
     Basem Emara: https://linkedin.com/in/basememara
