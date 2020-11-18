@@ -2,6 +2,8 @@
 # Swifty Protocol-Oriented Dependency Injection #
 Musicly - iOS App.
 
+![app-preview](https://user-images.githubusercontent.com/27929436/71583233-d1a45b00-2b0d-11ea-9018-1aaf6b453748.png)
+
     Musicly is an app for searching songs and albums on LastFm endpoints and
     store musics to Realm database.
     End points that are being used: https://www.last.fm/ (http://ws.audioscrobbler.com/)
@@ -40,7 +42,3 @@ Musicly - iOS App.
     * Battle-tested DI implementation with no outside dependencies or magic. 
     * It combines protocol extension and type erasure to give you a solid, flexible dependency
     injection that works great with unit test and even frameworks.
-    
-## Preview ##
-
-![New Project](https://user-images.githubusercontent.com/27929436/71583233-d1a45b00-2b0d-11ea-9018-1aaf6b453748.png)
